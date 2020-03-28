@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 6.889622, lng: 79.9023593},
+          zoom: 12
+        });
+        
+        //Padukka
+        var latlng_padukka = {lat: 6.84063, lng: 80.0902003};
+        var infowindow_padukka = new google.maps.InfoWindow({content: "<div style='float:left'>" + 
+        "<img src='https://drive.google.com/thumbnail?id=1LO1T1fXIRVo0iIHK2yA2pYqBgsD8lI9N'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1LO1T1fXIRVo0iIHK2yA2pYqBgsD8lI9N'>Full Image</a></div>"
+        ,maxWidth: 300});
+        var marker_padukka = new google.maps.Marker({position:latlng_padukka,map: map,title: 'Padukka Area'}); marker_padukka.addListener('click', function() {infowindow_padukka.open(map, marker_padukka);});
+
+        //Homagama
+        //https://drive.google.com/file/d/1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3/view?usp=sharing 6.841227,80.0009113
+        var latlng_homagama = {lat: 6.841227, lng: 80.0009113};
+        var infowindow_homagama = new google.maps.InfoWindow({content: "<div style='float:left'>" + 
+        "<img src='https://drive.google.com/thumbnail?id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'>Full Image</a></div>"
+        ,maxWidth: 300});
+        var marker_homagama = new google.maps.Marker({position:latlng_homagama,map: map,title: 'Homagama Area'}); marker_homagama.addListener('click', function() {infowindow_homagama.open(map, marker_homagama);});
+
+        //Rathmalana
+        //https://drive.google.com/file/d/1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3/view?usp=sharing
+        //https://drive.google.com/file/d/1CCwZIJmPAiJpGbM8UZ1dyYEKx6uUDV3R/view?usp=sharing
+        var latlng_rathmalana = {lat: 6.819778, lng: 79.8718303};
+        var infowindow_rathmalana = new google.maps.InfoWindow({content: "<div style='float:left'> " + 
+        "<img src='https://drive.google.com/thumbnail?id=1CCwZIJmPAiJpGbM8UZ1dyYEKx6uUDV3R'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1CCwZIJmPAiJpGbM8UZ1dyYEKx6uUDV3R'>Full Image</a></div>" +
+        "<img src='https://drive.google.com/thumbnail?id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'>Full Image</a></div>"
+        ,maxWidth: 300});
+        var marker_rathmalana = new google.maps.Marker({position:latlng_rathmalana,map: map,title: 'Homagama Area'}); marker_rathmalana.addListener('click', function() {infowindow_rathmalana.open(map, marker_rathmalana);});
+
+
+        //Kottawa 6.841648,79.9624423
+        var latlng_kottawa = {lat: 6.841648, lng: 79.9624423};
+        var infowindow_kottawa = new google.maps.InfoWindow({content: "<div style='float:left'>" + 
+        "<img src='https://drive.google.com/thumbnail?id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'>Full Image</a></div>"
+        ,maxWidth: 300});
+        var marker_kottawa = new google.maps.Marker({position:latlng_kottawa,map: map,title: 'kottawa Area'}); marker_kottawa.addListener('click', function() {infowindow_kottawa.open(map, marker_kottawa);});
+        
+        //Dehiwala 6.851338,79.8637203
+
+
+        //Mount Lavinia
+
+
+        //Moratuwa
+
+
+
+        //Piliyandala
+
+
+        //Narahenpita
+
+
+
+        //Rajagiriya
+
+
+        //Kotte
+
+
+        //Nugegoda 6.869911,79.8860043
+        var latlng_nugegoda = {lat: 6.869911, lng: 79.8860043};
+        var infowindow_nugegoda = new google.maps.InfoWindow({content: "<div style='float:left'>" + 
+        "<img src='https://drive.google.com/thumbnail?id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'><br><a target='_blank' href='https://drive.google.com/uc?export=view&id=1HZj8kX-BmLvVb91hwfTqlBfQuqBpEZu3'>Full Image</a></div>"
+        ,maxWidth: 300});
+        var marker_nugegoda = new google.maps.Marker({position:latlng_nugegoda,map: map,title: 'nugegoda Area'}); marker_nugegoda.addListener('click', function() {infowindow_nugegoda.open(map, marker_nugegoda);});
+
+
+
+
+
+
+
+
+
+
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAElf7IXCFwwhcEPKpJ5atWXCkK9fsP4U&callback=initMap"
+    async defer></script>
+  </body>
+</html>
